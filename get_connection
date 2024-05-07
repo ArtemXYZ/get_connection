@@ -9,7 +9,7 @@ from sqlalchemy import inspect
 from src.database.tables_set import *  # Discount, Base  # Объект базового класса (наследование):
 # from src.decorators.debug import *
 # ---------------------------------- Импорт переменных
-from src.configs.config import config_local_host  # Обязательно для импорта, иначе не создадутся таблицы в базе данных
+from src.configs.config import config_local_host  # 
 from src.recording_events.loger import *
 # ----------------------------------------------------------------------------------------------------------------------
 
