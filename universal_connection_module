@@ -4,11 +4,7 @@
 from sqlalchemy import create_engine # Библиотека для создания подключений к БД
 from sqlalchemy.engine.url import URL
 from sqlalchemy.exc import OperationalError
-# import psycopg2
 # ---------------------------------- Импорт локальных модулей
-# from config import config_jar
-# # import config
-# from src.decorators.debug import *
 # ----------------------------------------------------------------------------------------------------------------------
 
 def get_connect(any_config:dict | URL | str):
