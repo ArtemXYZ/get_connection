@@ -1,0 +1,5 @@
+def get_connection():
+    """Функция создает подключение к базе данных"""
+    engine = create_engine(config_local_host) # 0. Создаем подключение:
+    connection = engine.connect()
+    return connection
