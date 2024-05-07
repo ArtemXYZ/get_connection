@@ -18,3 +18,25 @@ def get_connection():
     engine = create_engine(config_local_host) # 0. Создаем подключение:
     connection = engine.connect()
     return connection
+
+def get_session():
+    """Функция создает сессию необходимую для работы с БД."""
+    connection = get_connection()
+    Session = sessionmaker(bind=connection) # 1. Создаем объект Session maker:
+    # Нужен для создания сессий для записи данных, организации запросов и др. действия в бд
+    return Session
+
+
+def create_db_tb():
+    """Функция создания базы данных и всех таблиц если они еще не созданы.
+
+    # Справка:
+    # create_all - метод проверяет наличие в метаданных Base таблиц, которые от него отнаследовались и уже подключены
+    # в программе и если этой таблицы нет, вызывается метод create для ее создания. Если есть, то ничего не происходит.
+    """
+
+    connection = get_connection()
+    Session = sessionmaker(bind=connection) # 1. Создаем объект Session maker:
+    # Нужен для создания сессий для записи данных, организации запросов и др. действия в бд
+
+    Base.metadata.create_all(connection)
