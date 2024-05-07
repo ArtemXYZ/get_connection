@@ -3,14 +3,10 @@
 # ---------------------------------- Импорт сторонних библиотек
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy import create_engine
-from sqlalchemy.exc import SQLAlchemyError
-from sqlalchemy import inspect
 # ---------------------------------- Импорт локальных модулей
 from src.database.tables_set import *  # Discount, Base  # Объект базового класса (наследование):
-# from src.decorators.debug import *
 # ---------------------------------- Импорт переменных
 from src.configs.config import config_local_host  # 
-from src.recording_events.loger import *
 # ----------------------------------------------------------------------------------------------------------------------
 
 def get_connection():
